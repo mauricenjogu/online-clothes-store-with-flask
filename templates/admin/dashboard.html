@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% include "admin_navbar.html" %}
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Admin Dashboard</h1>
+    
+    <h2>Product List</h2>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }} - ${{ product.price }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Add admin-specific content here -->
+{% endblock %}

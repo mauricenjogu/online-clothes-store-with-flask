@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Contact Information</h1>
+            <h2>Admin Information</h2>
+            <ul>
+                <li>Name: {{ admin.name }}</li>
+                <li>Email: {{ admin.email }}</li>
+                <li>Phone: {{ admin.phone }}</li>
+                <li>Location: {{ admin.location }}</li>
+                <!-- Add more fields as needed -->
+            </ul>
+        </div>
+        <!-- Add more contact information sections as needed -->
+    </div>
+{% endblock %}

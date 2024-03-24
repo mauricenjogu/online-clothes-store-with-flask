@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Product Details - Simoshop
+{% endblock %}
+
+{% block content %}
+<!-- Product Details -->
+<section class="product-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="product_image.jpg" class="img-fluid rounded" alt="Product Image">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="mb-4">Product Name</h2>
+                <p class="text-muted">SKU: 123456789</p>
+                <p class="lead mb-4">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu libero nec sapien maximus dictum vel nec nisi.</p>
+                <p class="h4 mb-4">Price: $XX.XX</p>
+                <div class="mb-4">
+                    <label for="quantity" class="form-label">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" class="form-control" value="1" min="1">
+                </div>
+                <button class="btn btn-primary me-3">Add to Cart</button>
+                <button class="btn btn-outline-secondary">Add to Wishlist</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Similar Products -->
+<section class="similar-products">
+    <div class="container">
+        <h3 class="mb-4">Similar Products</h3>
+        <div class="row">
+            <!-- Similar product cards -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="similar_product1.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Similar Product 1</h5>
+                        <p class="card-text text-muted">$XX.XX</p>
+                        <a href="#" class="btn btn-outline-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more similar product cards -->
+        </div>
+    </div>
+</section>
+{% endblock %}

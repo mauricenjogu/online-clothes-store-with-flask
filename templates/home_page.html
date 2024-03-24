@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<!-- Hero section -->
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Welcome to Simoshop</h1>
+                <p>Discover the latest trends in fashion. Shop now!</p>
+                <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+            </div>
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/600x400" alt="Fashion Model" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured products section -->
+<section class="featured-products">
+    <div class="container">
+        <h2>Featured Products</h2>
+        <div class="row">
+            <!-- Product cards go here -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">$99.99</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more product cards here -->
+        </div>
+    </div>
+</section>
+
+<!-- Flash messages section -->
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+{% endblock %}
